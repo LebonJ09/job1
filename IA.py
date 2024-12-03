@@ -131,7 +131,7 @@ def ia_jouer(grille):
     coups_possibles = [(i, j) for i in range(3) for j in range(3) if grille[i][j] == " "]
     i, j = random.choice(coups_possibles)
     grille[i][j] = "O"
-    return [k for k, v in pos_dic.items() if v == [i, j]][0]
+    return [int(k) for k, v in pos_dic.items() if v == [i, j]][0]
 
 # Gérer le tour du joueur
 def joueur_jouer(grille):
